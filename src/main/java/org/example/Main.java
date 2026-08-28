@@ -8,75 +8,84 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        // Exercício 1 - Média Aritmética
+        // Exercício 1 - Conversor de Moeda
 
-        System.out.println("Exercício 1 - Média Aritmética");
+        System.out.println("Exercício 1 - Conversor de Moeda");
 
-        System.out.println("Digite a primeira nota:");
-        double nota1 = entrada.nextDouble();
+        System.out.println("Digite o valor em Reais:");
+        double reais = entrada.nextDouble();
 
-        System.out.println("Digite a segunda nota:");
-        double nota2 = entrada.nextDouble();
+        System.out.println("Digite a cotação do Dólar:");
+        double cotacaoDolar = entrada.nextDouble();
 
-        System.out.println("Digite a terceira nota:");
-        double nota3 = entrada.nextDouble();
+        double dolares = reais / cotacaoDolar;
 
-        double media = (nota1 + nota2 + nota3) / 3;
-
-        System.out.println("A média é: " + media);
+        System.out.println("O valor convertido em Dólares é: " + dolares);
 
 
-        // Exercício 2 - Conversor de Temperatura
+        // Exercício 2 - Consumo de Combustível
 
-        System.out.println("\nExercício 2 - Conversor de Temperatura");
+        System.out.println("\nExercício 2 - Consumo de Combustível");
 
-        System.out.println("Digite a temperatura em Celsius:");
-        double celsius = entrada.nextDouble();
+        System.out.println("Digite a distância percorrida em km:");
+        double distancia = entrada.nextDouble();
 
-        double fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("Digite o total de combustível gasto em litros:");
+        double litros = entrada.nextDouble();
 
-        System.out.println("A temperatura em Fahrenheit é: " + fahrenheit);
+        double consumo = distancia / litros;
 
-
-        // Exercício 3 - Área do Quadrado
-
-        System.out.println("\nExercício 3 - Área do Quadrado");
-
-        System.out.println("Digite o lado do quadrado:");
-        double lado = entrada.nextDouble();
-
-        double area = lado * lado;
-
-        System.out.println("A área do quadrado é: " + area);
+        System.out.println("O consumo médio é: " + consumo + " km/l");
 
 
-        // Exercício 4 - Perímetro do Retângulo
+        // Exercício 3 - Salário Mensal
 
-        System.out.println("\nExercício 4 - Perímetro do Retângulo");
+        System.out.println("\nExercício 3 - Salário Mensal");
 
-        System.out.println("Digite a base do retângulo:");
-        double base = entrada.nextDouble();
+        System.out.println("Digite o valor da hora trabalhada:");
+        double valorHora = entrada.nextDouble();
 
-        System.out.println("Digite a altura do retângulo:");
-        double altura = entrada.nextDouble();
+        System.out.println("Digite o número de horas trabalhadas no mês:");
+        double horasTrabalhadas = entrada.nextDouble();
 
-        double perimetro = 2 * (base + altura);
+        double salarioBruto = valorHora * horasTrabalhadas;
 
-        System.out.println("O perímetro do retângulo é: " + perimetro);
+        System.out.println("O salário bruto é: R$ " + salarioBruto);
 
 
-        // Exercício 5 - Cálculo de Desconto
+        // Exercício 4 - Área do Círculo
 
-        System.out.println("\nExercício 5 - Cálculo de Desconto");
+        System.out.println("\nExercício 4 - Área do Círculo");
 
-        System.out.println("Digite o valor do produto:");
-        double valorProduto = entrada.nextDouble();
+        System.out.println("Digite o raio do círculo:");
+        double raio = entrada.nextDouble();
 
-        double desconto = valorProduto * 0.15;
-        double novoValor = valorProduto - desconto;
+        double area = Math.PI * raio * raio;
 
-        System.out.println("O valor do desconto é: " + desconto);
-        System.out.println("O novo valor do produto é: " + novoValor);
+        System.out.println("A área do círculo é: " + area);
+
+
+        // Exercício 5 - Troca de Valores
+
+        System.out.println("\nExercício 5 - Troca de Valores");
+
+        System.out.println("Digite o valor de A:");
+        int valorA = entrada.nextInt();
+
+        System.out.println("Digite o valor de B:");
+        int valorB = entrada.nextInt();
+
+        System.out.println("Antes da troca:");
+        System.out.println("A = " + valorA);
+        System.out.println("B = " + valorB);
+
+        int temporario = valorA;
+        valorA = valorB;
+        valorB = temporario;
+
+        System.out.println("Depois da troca:");
+        System.out.println("A = " + valorA);
+        System.out.println("B = " + valorB);
 
         entrada.close();
     }
