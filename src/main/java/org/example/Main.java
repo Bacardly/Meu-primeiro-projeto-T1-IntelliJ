@@ -8,84 +8,85 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        // Exercício 1 - Conversor de Moeda
+        // Exercício 1 - Cálculo de IMC
 
-        System.out.println("Exercício 1 - Conversor de Moeda");
+        System.out.println("Exercício 1 - Cálculo de IMC");
 
-        System.out.println("Digite o valor em Reais:");
-        double reais = entrada.nextDouble();
+        System.out.println("Digite o peso em kg:");
+        double peso = entrada.nextDouble();
 
-        System.out.println("Digite a cotação do Dólar:");
-        double cotacaoDolar = entrada.nextDouble();
+        System.out.println("Digite a altura em metros:");
+        double altura = entrada.nextDouble();
 
-        double dolares = reais / cotacaoDolar;
+        double imc = peso / (altura * altura);
 
-        System.out.println("O valor convertido em Dólares é: " + dolares);
-
-
-        // Exercício 2 - Consumo de Combustível
-
-        System.out.println("\nExercício 2 - Consumo de Combustível");
-
-        System.out.println("Digite a distância percorrida em km:");
-        double distancia = entrada.nextDouble();
-
-        System.out.println("Digite o total de combustível gasto em litros:");
-        double litros = entrada.nextDouble();
-
-        double consumo = distancia / litros;
-
-        System.out.println("O consumo médio é: " + consumo + " km/l");
+        System.out.println("O IMC é: " + imc);
 
 
-        // Exercício 3 - Salário Mensal
+        // Exercício 2 - Conversor de Medidas
 
-        System.out.println("\nExercício 3 - Salário Mensal");
+        System.out.println("\nExercício 2 - Conversor de Medidas");
 
-        System.out.println("Digite o valor da hora trabalhada:");
-        double valorHora = entrada.nextDouble();
+        System.out.println("Digite o valor em metros:");
+        double metros = entrada.nextDouble();
 
-        System.out.println("Digite o número de horas trabalhadas no mês:");
-        double horasTrabalhadas = entrada.nextDouble();
+        double centimetros = metros * 100;
+        double milimetros = metros * 1000;
 
-        double salarioBruto = valorHora * horasTrabalhadas;
-
-        System.out.println("O salário bruto é: R$ " + salarioBruto);
-
-
-        // Exercício 4 - Área do Círculo
-
-        System.out.println("\nExercício 4 - Área do Círculo");
-
-        System.out.println("Digite o raio do círculo:");
-        double raio = entrada.nextDouble();
-
-        double area = Math.PI * raio * raio;
-
-        System.out.println("A área do círculo é: " + area);
+        System.out.println("Valor em centímetros: " + centimetros);
+        System.out.println("Valor em milímetros: " + milimetros);
 
 
-        // Exercício 5 - Troca de Valores
+        // Exercício 3 - Divisão e Resto
 
-        System.out.println("\nExercício 5 - Troca de Valores");
+        System.out.println("\nExercício 3 - Divisão e Resto");
 
-        System.out.println("Digite o valor de A:");
-        int valorA = entrada.nextInt();
+        System.out.println("Digite o primeiro número inteiro:");
+        int numero1 = entrada.nextInt();
 
-        System.out.println("Digite o valor de B:");
-        int valorB = entrada.nextInt();
+        System.out.println("Digite o segundo número inteiro:");
+        int numero2 = entrada.nextInt();
 
-        System.out.println("Antes da troca:");
-        System.out.println("A = " + valorA);
-        System.out.println("B = " + valorB);
+        int quociente = numero1 / numero2;
+        int resto = numero1 % numero2;
 
-        int temporario = valorA;
-        valorA = valorB;
-        valorB = temporario;
+        System.out.println("Quociente da divisão: " + quociente);
+        System.out.println("Resto da divisão: " + resto);
 
-        System.out.println("Depois da troca:");
-        System.out.println("A = " + valorA);
-        System.out.println("B = " + valorB);
+
+        // Exercício 4 - Cálculo de Juros Simples
+
+        System.out.println("\nExercício 4 - Cálculo de Juros Simples");
+
+        System.out.println("Digite o capital inicial:");
+        double capital = entrada.nextDouble();
+
+        System.out.println("Digite a taxa de juros mensal:");
+        double taxa = entrada.nextDouble();
+
+        System.out.println("Digite o tempo em meses:");
+        double tempo = entrada.nextDouble();
+
+        double juros = capital * taxa * tempo;
+        double montante = capital + juros;
+
+        System.out.println("Juros: R$ " + juros);
+        System.out.println("Montante final: R$ " + montante);
+
+
+        // Exercício 5 - Conversor de Tempo
+
+        System.out.println("\nExercício 5 - Conversor de Tempo");
+
+        System.out.println("Digite a quantidade total de segundos:");
+        int segundosTotais = entrada.nextInt();
+
+        int horas = segundosTotais / 3600;
+        int minutos = (segundosTotais % 3600) / 60;
+        int segundos = segundosTotais % 60;
+
+        System.out.println("Tempo convertido: " + horas + " horas, "
+                + minutos + " minutos e " + segundos + " segundos.");
 
         entrada.close();
     }
